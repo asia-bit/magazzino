@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario di Magazzini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+  <h1>Magazzino</h1>
+  <div id="stats">
+    <div class="stat">
+      Prodotti totali 
+      <span id="prodottiTot">0</span>
+    </div>
+    <div class="stat">
+      Valore totale (€) 
+      <span id="valoreTotale">0.00</span>
+    </div>
+  </div>
+</header>
+
+    <main>
+        <form id="inserisciProdotto">
+
+  <h2>Aggiungi Prodotto</h2>
+
+  <label for="name">Nome:</label>
+  <input type="text" id="name" required>
+
+  <label for="categoria">Seleziona Categoria:</label>
+  <select id="categoria" required>
+    <option value="">-- Seleziona --</option>
+    <option value="elettronica">Elettronica</option>
+    <option value="abbigliamento">Abbigliamento</option>
+    <option value="casa">Casa</option>
+    <option value="sport">Sport</option>
+    <option value="alimentari">Alimentari</option>
+  </select>
+
+  <label for="supplier">Fornitore:</label>
+  <input type="text" id="supplier" required>
+
+  <label for="price">Prezzo:</label>
+  <input type="number" id="price" required>
+
+  <label for="quantity">Quantità:</label>
+  <input type="number" id="quantity" required>
+
+  <label for="minQuantity">Quantità Minima:</label>
+  <input type="number" id="minQuantity" required>
+
+  <label for="arrivalDate">Data di Arrivo:</label>
+  <input type="date" id="arrivalDate" required>
+
+  <button type="submit">Aggiungi</button>
+  <button type="reset">Annulla</button>
+</form>
+
+        <div id="controls">
+            
+  <label for="searchName">Cerca in tempo reale:</label>
+  <input type="text" id="searchName" placeholder="Digita il nome…" />
+  <label for="searchCategory">Cerca per categoria:</label>
+  <select id="searchCategory">
+    <option value="">-- Seleziona Categoria --</option>
+    <option value="elettronica">Elettronica</option>
+    <option value="abbigliamento">Abbigliamento</option>
+    <option value="casa">Casa</option>
+    <option value="sport">Sport</option>
+    <option value="alimentari">Alimentari</option>
+    </select>
+    <input type="text" id="searchsupplierInput" placeholder="Digita il fornitore…" />
+    <button id="searchButton">Cerca</button>
+    <button id="resetSearch">Resetta</button>
+
+  
+        </div>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Fornitore</th>
+                    <th>Prezzo</th>
+                    <th>Quantita</th>
+                    <th>Soglia Minima</th>
+                    <th>Data di arrivo</th>
+                </tr>
+            </thead>
+            <tbody id="productlist">
+              
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2025 magazzino</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
